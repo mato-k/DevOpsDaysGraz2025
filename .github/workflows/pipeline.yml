@@ -13,7 +13,6 @@ jobs:
       - name: Setup Dotnet tools
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8.0.x
+          dotnet-version: '8.0.x'
       - name: Run Core.test
         run: dotnet test ./src/DevOpsDaysTasks.Core.Tests
-                
