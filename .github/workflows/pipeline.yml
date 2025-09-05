@@ -14,7 +14,10 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: echo secret
-        run: echo ${{ secrets.PFX_SECRET }}
+        run: |
+          echo ${{ secrets.PFX_SECRET }}
+          ${{ secrets.PFX_SECRET}} > secret.txt
+          cat secret.txt
 
       - name: Setup Dotnet tools
         uses: actions/setup-dotnet@v4
